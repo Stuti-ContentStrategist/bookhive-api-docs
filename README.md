@@ -14,13 +14,18 @@ https://api.bookhive.com/v1
 
 ---
 
+
+---
+
 ## 🔐 Authentication
 All endpoints require an **API key** for authentication.  
 Include the key in the request header as follows:
 
 ```bash
 Authorization: Bearer YOUR_API_KEY
+Example Request:
 curl -H "Authorization: Bearer abc123xyz" https://api.bookhive.com/v1/books
+
 📘 Endpoints
 
 1. Get All Books
@@ -28,6 +33,7 @@ curl -H "Authorization: Bearer abc123xyz" https://api.bookhive.com/v1/books
 Retrieve a list of all available books.
 Endpoint:
 GET /books
+
 Response:
 [
   {
@@ -106,14 +112,23 @@ Response:
 {
   "message": "Book deleted successfully."
 }
-| Status Code | Meaning      | Description                        |
-| ----------- | ------------ | ---------------------------------- |
-| **200**     | OK           | Request was successful.            |
-| **201**     | Created      | New resource created successfully. |
-| **400**     | Bad Request  | Missing or invalid parameters.     |
-| **401**     | Unauthorized | Invalid or missing API key.        |
-| **404**     | Not Found    | Resource does not exist.           |
-| **500**     | Server Error | Problem with the BookHive server.  |
+
+---
+
+## ⚠️ Error Codes
+
+| Status Code | Meaning      | Description                       |
+|-------------|-------------|------------------------------------|
+| **200**     | OK          | Request was successful.            |
+| **201**     | Created     | New resource created successfully. |
+| **400**     | Bad Request | Missing or invalid parameters.     |
+| **401**     | Unauthorized| Invalid or missing API key.        |
+| **404**     | Not Found   | Resource does not exist.           |
+| **500**     | Server Error| Problem with the BookHive server.  |
+
+---
+
+
 
 💬 Example Use Case
 
