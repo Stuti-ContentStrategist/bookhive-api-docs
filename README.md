@@ -4,7 +4,7 @@
 ---
 ## 📑 Table of Contents
 
-1. [Overview](#overview)
+1. [Overview](##overview)
 2. [Base URL](#base-url)
 3. [Authentication](#authentication)
 4. [Endpoints](#endpoints)
@@ -21,18 +21,18 @@
 
 ---
 
-## 🧭 Overview{#overview}
+## 🧭 Overview {#overview}
 The **BookHive API** allows users to access, add, update, and manage books and authors in the BookHive digital library system.  
 It enables integration with reading apps, inventory dashboards, or recommendation systems.
 
 ---
 
-## 🌐 Base URL{#base-url}
+## 🌐 Base URL {#base-url}
 
 [https://api.bookhive.com/v1](https://api.bookhive.com/v1)
 
 ---
-## 🔐 Authentication{#authentication}
+## 🔐 Authentication {#authentication}
 
 All endpoints require an **API key** for authentication.  
 
@@ -47,7 +47,7 @@ curl -H "Authorization: Bearer abc123xyz" https://api.bookhive.com/v1/books
 ## 📘 Endpoints {#endpoints}
 
 
-### 1. Get All Books{#get-all-books}
+### 1. Get All Books {#get-all-books}
 
 Retrieve a list of all available books.
 
@@ -80,7 +80,7 @@ curl -X GET "https://api.bookhive.com/v1/books" \
 ]
 
 
-### 2. Get a Book by ID{#get-a-book-by-id}
+### 2. Get a Book by ID {#get-a-book-by-id}
 
 Retrieve detailed information for a single book.
 
@@ -106,7 +106,7 @@ GET /books/101
   
   "summary": "A touching story about solitude and imagination."}
 
-### 3. Add a New Book{#add-a-new-book}
+### 3. Add a New Book {#add-a-new-book}
 
 Add a new book to the database.
 
@@ -129,7 +129,7 @@ POST /books
   
   "book_id": 103}
 
-### 4. Update Book Details{#update-book-details}
+### 4. Update Book Details {#update-book-details}
 
 Update an existing book’s information.
 
@@ -151,7 +151,7 @@ PUT /books/103
 
 {"message": "Book details updated successfully."}
 
-### 5. Delete a Book{#delete-a-book}
+### 5. Delete a Book {#delete-a-book}
 
 Remove a book from the database.
 
