@@ -2,22 +2,24 @@
 *A sample API documentation project developed as part of my content strategy and technical writing portfolio.*
 
 ---
+
 ## 📑 Table of Contents
 
-1. [Overview](#overview)
-2. [Base URL](#base-url)
-3. [Authentication](#authentication)
-4. [Endpoints](#endpoints)
+1. [🧭 Overview](#%F0%9F%A7%AD-overview)
+2. [🌐 Base URL](#%F0%9F%8C%90-base-url)
+3. [🔐 Authentication](#%F0%9F%94%90-authentication)
+4. [📘 Endpoints](#%F0%9F%93%98-endpoints)
    - [Get All Books](#get-all-books)
    - [Get a Book by ID](#get-a-book-by-id)
    - [Add a New Book](#add-a-new-book)
    - [Update Book Details](#update-book-details)
    - [Delete a Book](#delete-a-book)
-5. [Error Codes](#error-codes)
-6. [Example Use Case](#example-use-case)
-7. [Versioning](#versioning)
-8. [Notes for Documentation Reviewers](#notes-for-documentation-reviewers)
-9. [Author](#author)
+5. [⚠️ Error Codes](#%E2%9A%A0%EF%B8%8F-error-codes)
+6. [💬 Example Use Case](#%F0%9F%92%AC-example-use-case)
+7. [🧾 Versioning](#%F0%9F%A7%BE-versioning)
+8. [🧠 Notes for Documentation Reviewers](#%F0%9F%A7%A0-notes-for-documentation-reviewers)
+9. [👩‍💻 Author](#%F0%9F%91%A9%E2%80%8D%F0%9F%92%BB-author)
+
 
 ---
 
