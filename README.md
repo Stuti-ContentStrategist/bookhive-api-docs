@@ -23,7 +23,7 @@
 
 ---
 
-## 🧭 Overview {#overview}
+## 🧭 Overview
 The **BookHive API** allows users to access, add, update, and manage books and authors in the BookHive digital library system.  
 It enables integration with reading apps, inventory dashboards, or recommendation systems.
 
