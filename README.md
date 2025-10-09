@@ -10,31 +10,40 @@ It enables integration with reading apps, inventory dashboards, or recommendatio
 ---
 
 ## 🌐 Base URL
-https://api.bookhive.com/v1
+
+[https://api.bookhive.com/v1](https://api.bookhive.com/v1)
 
 ---
-
-
----
-
 ## 🔐 Authentication
+
 All endpoints require an **API key** for authentication.  
+
 Include the key in the request header as follows:
 
-```bash
 Authorization: Bearer YOUR_API_KEY
-Example Request:
+
 curl -H "Authorization: Bearer abc123xyz" https://api.bookhive.com/v1/books
 
-📘 Endpoints
+---
 
-1. Get All Books
+## 📘 Endpoints {#endpoints}
+
+
+### 1. Get All Books {#get-all-books}
 
 Retrieve a list of all available books.
-Endpoint:
+
+#### Endpoint:
+
 GET /books
 
-Response:
+#### Example Request:
+
+curl -X GET "https://api.bookhive.com/v1/books" \
+-H "Authorization: Bearer YOUR_API_KEY"
+
+#### Response:
+
 [
   {
     "id": 101,
@@ -52,66 +61,95 @@ Response:
   }
 ]
 
-2. Get a Book by ID
+
+### 2. Get a Book by ID
+
 Retrieve detailed information for a single book.
-Endpoint:
+
+#### Endpoint:
+
 GET /books/{id}
-Example Request:
+
+#### Example Request:
+
 GET /books/101
-Response:
-{
-  "id": 101,
+
+#### Response:
+
+{"id": 101,
+  
   "title": "The Silent Reader",
+  
   "author": "Jane Foster",
+  
   "genre": "Fiction",
+  
   "published_year": 2021,
-  "summary": "A touching story about solitude and imagination."
-}
+  
+  "summary": "A touching story about solitude and imagination."}
 
-3. Add a New Book
+### 3. Add a New Book
+
 Add a new book to the database.
-Endpoint:
+
+#### Endpoint:
+
 POST /books
-Request Body:
-{
-  "title": "The Cloud Whisperer",
+
+#### Request Body:
+
+{"title": "The Cloud Whisperer",
+  
   "author": "Liam Brooks",
+  
   "genre": "Fantasy",
-  "published_year": 2023
-}
-Response:
-{
-  "message": "Book added successfully.",
-  "book_id": 103
-}
+  
+  "published_year": 2023}
 
-4. Update Book Details
+#### Response:
+{"message": "Book added successfully.",
+  
+  "book_id": 103}
+
+### 4. Update Book Details
+
 Update an existing book’s information.
-Endpoint:
-PUT /books/{id}
-Example Request:
-PUT /books/103
-Request Body:
-{
-  "genre": "Science Fiction",
-  "published_year": 2024
-}
-Response:
-{
-  "message": "Book details updated successfully."
-}
 
-5. Delete a Book
+#### Endpoint:
+
+PUT /books/{id}
+
+#### Example Request:
+
+PUT /books/103
+
+#### Request Body:
+
+{"genre": "Science Fiction",
+ 
+ "published_year": 2024}
+
+#### Response:
+
+{"message": "Book details updated successfully."}
+
+### 5. Delete a Book
+
 Remove a book from the database.
-Endpoint:
+
+#### Endpoint:
+
 DELETE /books/{id}
-Example Request:
+
+#### Example Request:
+
 DELETE /books/103
+
 Authorization: Bearer YOUR_API_KEY
-Response:
-{
-  "message": "Book deleted successfully."
-}
+
+#### Response:
+
+{ "message": "Book deleted successfully." }
 
 ---
 
@@ -130,22 +168,25 @@ Response:
 
 
 
-💬 Example Use Case
+## 💬 Example Use Case
 
 A content strategist working with a reading app could use the BookHive API to:
 Auto-update book collections from BookHive’s database
 Generate book recommendation lists dynamically
 Manage author profiles and their published works
 
-🧾 Versioning
+---
+
+## 🧾 Versioning
 
 The current version of the API is v1.
 Future updates will follow the format:
 
 https://api.bookhive.com/v2
 
+---
 
-🧠 Notes for Documentation Reviewers
+## 🧠 Notes for Documentation Reviewers
 This project demonstrates:
 
 Clear structure of API documentation
@@ -153,9 +194,11 @@ Consistent formatting and code samples
 Concise explanations for each endpoint
 Professional presentation suitable for portfolios
 
-👩‍💻 Author
+---
 
-Stuti – Content Strategist & Technical Writer
-GitHub Profile
+## 👩‍💻 Author
+
+Stuti Sanghvi – Content Strategist & Technical Writer
+[GitHub Profile](https://github.com/Stuti-ContentStrategist)
 
 
