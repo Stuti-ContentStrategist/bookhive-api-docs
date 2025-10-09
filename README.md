@@ -4,7 +4,7 @@
 ---
 ## 📑 Table of Contents
 
-1. [Overview](##overview)
+1. [Overview](#overview)
 2. [Base URL](#base-url)
 3. [Authentication](#authentication)
 4. [Endpoints](#endpoints)
