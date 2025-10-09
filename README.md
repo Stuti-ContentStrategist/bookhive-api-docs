@@ -2,19 +2,36 @@
 *A sample API documentation project developed as part of my content strategy and technical writing portfolio.*
 
 ---
+## 📑 Table of Contents
+1. [Overview](#overview)
+2. [Base URL](#base-url)
+3. [Authentication](#authentication)
+4. [Endpoints](#endpoints)
+   - [Get All Books](#get-all-books)
+   - [Get a Book by ID](#get-a-book-by-id)
+   - [Add a New Book](#add-a-new-book)
+   - [Update Book Details](#update-book-details)
+   - [Delete a Book](#delete-a-book)
+5. [Error Codes](#error-codes)
+6. [Example Use Case](#example-use-case)
+7. [Versioning](#versioning)
+8. [Notes for Documentation Reviewers](#notes-for-documentation-reviewers)
+9. [Author](#author)
 
-## 🧭 Overview
+---
+
+## 🧭 Overview{#overview}
 The **BookHive API** allows users to access, add, update, and manage books and authors in the BookHive digital library system.  
 It enables integration with reading apps, inventory dashboards, or recommendation systems.
 
 ---
 
-## 🌐 Base URL
+## 🌐 Base URL{#base-url}
 
 [https://api.bookhive.com/v1](https://api.bookhive.com/v1)
 
 ---
-## 🔐 Authentication
+## 🔐 Authentication{#authentication}
 
 All endpoints require an **API key** for authentication.  
 
@@ -29,7 +46,7 @@ curl -H "Authorization: Bearer abc123xyz" https://api.bookhive.com/v1/books
 ## 📘 Endpoints {#endpoints}
 
 
-### 1. Get All Books {#get-all-books}
+### 1. Get All Books{#get-all-books}
 
 Retrieve a list of all available books.
 
@@ -62,7 +79,7 @@ curl -X GET "https://api.bookhive.com/v1/books" \
 ]
 
 
-### 2. Get a Book by ID
+### 2. Get a Book by ID{#get-a-book-by-id}
 
 Retrieve detailed information for a single book.
 
@@ -88,7 +105,7 @@ GET /books/101
   
   "summary": "A touching story about solitude and imagination."}
 
-### 3. Add a New Book
+### 3. Add a New Book{#add-a-new-book}
 
 Add a new book to the database.
 
@@ -111,7 +128,7 @@ POST /books
   
   "book_id": 103}
 
-### 4. Update Book Details
+### 4. Update Book Details{#update-book-details}
 
 Update an existing book’s information.
 
@@ -133,7 +150,7 @@ PUT /books/103
 
 {"message": "Book details updated successfully."}
 
-### 5. Delete a Book
+### 5. Delete a Book{#delete-a-book}
 
 Remove a book from the database.
 
@@ -153,7 +170,7 @@ Authorization: Bearer YOUR_API_KEY
 
 ---
 
-## ⚠️ Error Codes
+## ⚠️ Error Codes {#error-codes}
 
 | Status Code | Meaning      | Description                       |
 |-------------|-------------|------------------------------------|
@@ -168,7 +185,7 @@ Authorization: Bearer YOUR_API_KEY
 
 
 
-## 💬 Example Use Case
+## 💬 Example Use Case {#example-use-case}
 
 A content strategist working with a reading app could use the BookHive API to:
 Auto-update book collections from BookHive’s database
@@ -177,7 +194,7 @@ Manage author profiles and their published works
 
 ---
 
-## 🧾 Versioning
+## 🧾 Versioning {#versioning}
 
 The current version of the API is v1.
 Future updates will follow the format:
@@ -186,7 +203,7 @@ https://api.bookhive.com/v2
 
 ---
 
-## 🧠 Notes for Documentation Reviewers
+## 🧠 Notes for Documentation Reviewers {#notes-for-documentation-reviewers}
 This project demonstrates:
 
 Clear structure of API documentation
@@ -196,7 +213,7 @@ Professional presentation suitable for portfolios
 
 ---
 
-## 👩‍💻 Author
+## 👩‍💻 Author {#author}
 
 Stuti Sanghvi – Content Strategist & Technical Writer
 [GitHub Profile](https://github.com/Stuti-ContentStrategist)
