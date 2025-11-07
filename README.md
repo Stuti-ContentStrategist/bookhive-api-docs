@@ -6,15 +6,15 @@ This API documentation project was developed to showcase best practices in techn
 
 ### 📖 Contents at a Glance
 
-This documentation covers:
+This documentation covers[:](./#overview)
 
-* 🧭 Overview
-* 🔐 Authentication
-* 📘 Endpoints
-* ⚠️ Error Codes
-* 💬 Example Use Case
-* 🧠 Notes for Reviewers
-* 👩‍💻 Author
+* [🧭 Overview](./#overview)
+* [🔐 Authentication](./#authentication)
+* [📘 Endpoints](./#endpoints)
+* [⚠️ Error Codes](./#error-codes)
+* [💬 Example Use Case](./#example-use-case)
+* [🧠 Notes for Reviewers](./#notes-for-documentation-reviewers)
+* [👩‍💻 Author](./#author)
 
 ***
 
