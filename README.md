@@ -1,50 +1,68 @@
 # 📚 BookHive API Documentation
-*A sample API documentation project developed as part of my content strategy and technical writing portfolio.*
 
+## 📚 BookHive API Documentation
 
+A sample API documentation project developed as part of my content strategy and technical writing portfolio.
 
----
+***
 
-## 🧭 Overview
-The **BookHive API** allows users to access, add, update, and manage books and authors in the BookHive digital library system.  
+### 🧭 Overview
+
+The **BookHive API** allows users to access, add, update, and manage books and authors in the BookHive digital library system.\
 It enables integration with reading apps, inventory dashboards, or recommendation systems.
 
----
+***
 
-## 🌐 Base URL
+### 🌐 Base URL
 
-[https://api.bookhive.com/v1](https://api.bookhive.com/v1)
+```
+https://api.bookhive.com/v1
+```
 
----
-## 🔐 Authentication
+***
 
-All endpoints require an **API key** for authentication.  
+### 🔐 Authentication
+
+All endpoints require an API key for authentication.
 
 Include the key in the request header as follows:
 
+```
+plain text
+
 Authorization: Bearer YOUR_API_KEY
+```
+
+**Example:**
+
+```bash
+bash
 
 curl -H "Authorization: Bearer abc123xyz" https://api.bookhive.com/v1/books
+```
 
----
+***
 
-## 📘 Endpoints
+### 📘 Endpoints
 
+#### 1️⃣ Get All Books
 
-### 1. Get All Books
-
+**Endpoint:** `GET /books`\
 Retrieve a list of all available books.
 
-#### Endpoint:
+**Example Request:**
 
-GET /books
-
-#### Example Request:
+```bash
+bash
 
 curl -X GET "https://api.bookhive.com/v1/books" \
 -H "Authorization: Bearer YOUR_API_KEY"
+```
 
-#### Response:
+**Response:**
+
+```json
+json
 
 [
   {
@@ -62,145 +80,189 @@ curl -X GET "https://api.bookhive.com/v1/books" \
     "published_year": 2024
   }
 ]
+```
 
+***
 
-### 2. Get a Book by ID 
+#### 2️⃣ Get a Book by ID
 
+**Endpoint:** `GET /books/{id}`\
 Retrieve detailed information for a single book.
 
-#### Endpoint:
+**Example Request:**
 
-GET /books/{id}
+```bash
+bash
 
-#### Example Request:
+curl -X GET "https://api.bookhive.com/v1/books/101" \
+-H "Authorization: Bearer YOUR_API_KEY"
+```
 
-GET /books/101
+**Response:**
 
-#### Response:
+```json
+json
 
-{"id": 101,
-  
+{
+  "id": 101,
   "title": "The Silent Reader",
-  
   "author": "Jane Foster",
-  
   "genre": "Fiction",
-  
   "published_year": 2021,
-  
-  "summary": "A touching story about solitude and imagination."}
+  "summary": "A touching story about solitude and imagination."
+}
+```
 
-### 3. Add a New Book
+***
 
+#### 3️⃣ Add a New Book
+
+**Endpoint:** `POST /books`\
 Add a new book to the database.
 
-#### Endpoint:
+**Request Body:**
 
-POST /books
-
-#### Request Body:
-
-{"title": "The Cloud Whisperer",
-  
+<pre class="language-json"><code class="lang-json"><strong>json
+</strong><strong>
+</strong><strong>{
+</strong>  "title": "The Cloud Whisperer",
   "author": "Liam Brooks",
-  
   "genre": "Fantasy",
-  
-  "published_year": 2023}
+  "published_year": 2023
+}
+</code></pre>
 
-#### Response:
-{"message": "Book added successfully.",
-  
-  "book_id": 103}
+**Response:**
 
-### 4. Update Book Details
+```json
+json
 
+{
+  "message": "Book added successfully.",
+  "book_id": 103
+}
+```
+
+***
+
+#### 4️⃣ Update Book Details
+
+**Endpoint:** `PUT /books/{id}`\
 Update an existing book’s information.
 
-#### Endpoint:
+**Example Request:**
 
-PUT /books/{id}
+```bash
+bash
 
-#### Example Request:
+curl -X PUT "https://api.bookhive.com/v1/books/103" \
+-H "Authorization: Bearer YOUR_API_KEY" \
+-d '{
+  "genre": "Science Fiction",
+  "published_year": 2024
+}'
+```
 
-PUT /books/103
+**Response:**
 
-#### Request Body:
+```json
+json
 
-{"genre": "Science Fiction",
- 
- "published_year": 2024}
+{
+  "message": "Book details updated successfully."
+}
+```
 
-#### Response:
+***
 
-{"message": "Book details updated successfully."}
+#### 5️⃣ Delete a Book
 
-### 5. Delete a Book
-
+**Endpoint:** `DELETE /books/{id}`\
 Remove a book from the database.
 
-#### Endpoint:
+**Example Request:**
 
-DELETE /books/{id}
+```bash
+bash
 
-#### Example Request:
+curl -X DELETE "https://api.bookhive.com/v1/books/103" \
+-H "Authorization: Bearer YOUR_API_KEY"
+```
 
-DELETE /books/103
+**Response:**
 
-Authorization: Bearer YOUR_API_KEY
+```json
+json
 
-#### Response:
+{
+  "message": "Book deleted successfully."
+}
+```
 
-{ "message": "Book deleted successfully." }
+***
 
----
+### ⚠️ Error Codes
 
-## ⚠️ Error Codes
+| Status Code | Meaning      | Description                        |
+| ----------- | ------------ | ---------------------------------- |
+| 200         | OK           | Request was successful.            |
+| 201         | Created      | New resource created successfully. |
+| 400         | Bad Request  | Missing or invalid parameters.     |
+| 401         | Unauthorized | Invalid or missing API key.        |
+| 404         | Not Found    | Resource does not exist.           |
+| 500         | Server Error | Problem with the BookHive server.  |
 
-| Status Code | Meaning      | Description                       |
-|-------------|-------------|------------------------------------|
-| **200**     | OK          | Request was successful.            |
-| **201**     | Created     | New resource created successfully. |
-| **400**     | Bad Request | Missing or invalid parameters.     |
-| **401**     | Unauthorized| Invalid or missing API key.        |
-| **404**     | Not Found   | Resource does not exist.           |
-| **500**     | Server Error| Problem with the BookHive server.  |
+***
 
----
-
-
-
-## 💬 Example Use Case 
+### 💬 Example Use Case
 
 A content strategist working with a reading app could use the BookHive API to:
-Auto-update book collections from BookHive’s database
-Generate book recommendation lists dynamically
-Manage author profiles and their published works
 
----
+* Auto-update book collections from BookHive’s database
+* Generate book recommendation lists dynamically
+* Manage author profiles and their published works
 
-## 🧾 Versioning
+***
 
-The current version of the API is v1.
-Future updates will follow the format:
+### 🧾 Versioning
 
+The current version of the API is **v1**.\
+Future updates will follow this format:
+
+```
 https://api.bookhive.com/v2
+```
 
----
+***
 
-## 🧠 Notes for Documentation Reviewers
+### 🧠 Notes for Documentation Reviewers
+
 This project demonstrates:
 
-Clear structure of API documentation
-Consistent formatting and code samples
-Concise explanations for each endpoint
-Professional presentation suitable for portfolios
+* Clear structure of API documentation
+* Consistent formatting and code samples
+* Concise explanations for each endpoint
+* Professional presentation suitable for portfolios
 
----
+***
 
-## 👩‍💻 Author 
+### 👩‍💻 Author
 
-Stuti Sanghvi – Content Strategist & Technical Writer
-[GitHub Profile](https://github.com/Stuti-ContentStrategist)
+**Stuti Sanghvi**\
+Content Strategist & Technical Writer
 
+With nearly two decades of experience in English language training and a strong foundation in content strategy and technical documentation, Stuti specializes in creating clear, structured, and developer-friendly content.
 
+Her professional interests include:
+
+* API documentation and SDK guides
+* Release notes and product updates
+* User manuals and knowledge base articles
+* Content design and UX writing for technical products
+
+This **BookHive API Documentation** project was created to demonstrate best practices in technical writing — including logical structuring, consistency in style, and clear code examples — as part of her professional documentation portfolio.
+
+**Connect:**\
+🔗 [GitHub](https://github.com/Stuti-ContentStrategist)\
+💼 [LinkedIn](https://linkedin.com/in/stuti-sanghvi)\
+✉️ [stuti@therenaissance.in](mailto:stuti@therenaissance.in)
