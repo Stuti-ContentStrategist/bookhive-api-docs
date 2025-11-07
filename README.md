@@ -9,10 +9,12 @@ This API documentation project was developed to showcase best practices in techn
 This documentation covers[:](./#overview)
 
 * [🧭 Overview](./#overview)
+* [🌐 Base URL](./#base-url)
 * [🔐 Authentication](./#authentication)
 * [📘 Endpoints](./#endpoints)
 * [⚠️ Error Codes](./#error-codes)
 * [💬 Example Use Case](./#example-use-case)
+* [🧾 Versioning](./#versioning)
 * [🧠 Notes for Reviewers](./#notes-for-documentation-reviewers)
 * [👩‍💻 Author](./#author)
 
