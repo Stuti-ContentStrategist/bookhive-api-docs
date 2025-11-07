@@ -1,15 +1,26 @@
 # 📚 BookHive API Documentation
 
-## 📚 BookHive API Documentation
+This API documentation project was developed to showcase best practices in technical writing — including clarity, organization, and consistency in developer documentation.
 
-A sample API documentation project developed as part of my content strategy and technical writing portfolio.
+***
+
+### 📖 Contents at a Glance
+
+This documentation covers:
+
+* 🧭 Overview
+* 🔐 Authentication
+* 📘 Endpoints
+* ⚠️ Error Codes
+* 💬 Example Use Case
+* 🧠 Notes for Reviewers
+* 👩‍💻 Author
 
 ***
 
 ### 🧭 Overview
 
-The **BookHive API** allows users to access, add, update, and manage books and authors in the BookHive digital library system.\
-It enables integration with reading apps, inventory dashboards, or recommendation systems.
+The **BookHive API** allows users to access, add, update, and manage books and authors in the BookHive digital library system. It enables integration with reading apps, inventory dashboards, or recommendation systems.
 
 ***
 
@@ -251,7 +262,7 @@ This project demonstrates:
 **Stuti Sanghvi**\
 Content Strategist & Technical Writer
 
-With nearly two decades of experience in English language training and a strong foundation in content strategy and technical documentation, Stuti specializes in creating clear, structured, and developer-friendly content.
+Combining a strong background in content strategy and hands-on technical writing, Stuti focuses on delivering documentation that bridges the gap between complex technology and user understanding.
 
 Her professional interests include:
 
@@ -262,7 +273,9 @@ Her professional interests include:
 
 This **BookHive API Documentation** project was created to demonstrate best practices in technical writing — including logical structuring, consistency in style, and clear code examples — as part of her professional documentation portfolio.
 
-**Connect:**\
-🔗 [GitHub](https://github.com/Stuti-ContentStrategist)\
+#### **Connect with the Author:**
+
 💼 [LinkedIn](https://linkedin.com/in/stuti-sanghvi)\
-✉️ [stuti@therenaissance.in](mailto:stuti@therenaissance.in)
+💌 [Email](mailto:stutisanghvi7@gmail.in)\
+🌐 [Notion Profile](https://www.notion.so/Stuti-Sanghvi-Content-Strategist-Technical-Writer-29cf34655bbd809589e7d360b8e98ed1)\
+🔗 [GitHub](https://github.com/Stuti-ContentStrategist)
